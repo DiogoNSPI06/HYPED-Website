@@ -1,3 +1,6 @@
+/*
+  © HypedGroupCode 2022 - Todos os direitos reservados
+*/
 const fs = require('fs');
 const express = require('express');
 const createError = require('http-errors');
