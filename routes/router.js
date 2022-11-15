@@ -9,6 +9,8 @@ const cookieSession = require('cookie-session');
 const expressLayouts = require('express-ejs-layouts');
 const helmet = require("helmet");
 const logger = require('morgan');
+const Ddos = require('ddos')
+const ddos = new Ddos;
 
 const config = require('./v1/config.json')
 
@@ -30,6 +32,7 @@ class App {
     this.app.use(express.static("/home/runner/HYPED-or-Website/public/static/"));
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(expressLayouts);
+    this.app.use(ddos.express)
     
     this.app.use(cookieParser());
     this.app.use(cookieSession({
