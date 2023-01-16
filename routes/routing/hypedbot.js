@@ -9,6 +9,7 @@ module.exports.Router = class Routes extends Router {
         title: "Discord's best bot!",
       })
 		});
+    
 	}
 };
 

@@ -5,9 +5,7 @@ module.exports.Router = class Routes extends Router {
 		super();
 
 		this.get('/', function (req, res) {
-			return res.render('minecraft.ejs', {
-        title: "MC",
-      })
+			return res.redirect('https://loja.hypeds.com/')
 		});
 	}
 };
